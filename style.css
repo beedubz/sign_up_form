@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+}
+
+@font-face {
+    font-family: 'Norse'; /* Choose a unique name for your font */
+    src: url('Norse-Bold.otf') format('opentype'); /* Path to your .otf file and its format */
+    font-weight: normal; /* Define its weight if it's a regular font */
+    font-style: normal;  /* Define its style if it's a regular font */
+    /* You can also add font-display: swap; for better performance */
+    font-display: swap;
+}
+
+#leftside {
+    display: flex;
+    flex: 1;
+    background-image: url('filippo-e4cea4z7hMU-unsplash.jpg');
+    background-size: 100% 100%;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: 'Norse', sans-serif;
+    font-size: 50px;
+}
+
+#rightside {
+    display: flex;
+    flex-direction: column;
+    flex:2;
+    background-color: rgba(247, 183, 183, 0.534);
+    font-family: 'Arial Narrow', Arial, Helvetica, sans-serif;
+}
+
+#topright {
+    height: 200px;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 100px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#odin-bar-container {
+background-color: rgba(10, 10, 10, 0.4); /* Semi-transparent white (adjust alpha value as needed) */
+    padding: 20px; /* Add padding inside the box around the text */
+    border-radius: 0; 
+    text-align: center;
+    /* Max width to keep it from stretching too wide if #leftside is huge */
+    max-width: 80%;
+    margin-top: 200px;
+    width: 100%; /* Make it span 100% of #leftside's width */
+    max-width: none; /* REMOVE: any max-width constraint */
+    border: none; /* REMOVE: any border styles */
+    margin-top: 100px;
+    color: white;
+    display: flex; /* Makes children (image and p) arrange in a row */
+    align-items: center; /* Vertically centers items along the cross-axis (good for image and text) */
+    justify-content: center; /* Horizontally centers the group of items */
+    gap: 10px; /* Adjust spacing between the image and text */
+}
+
+form {
+    background-color: white;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-top: 1px solid #ccc; /* 1px solid light gray border */
+    border-bottom: 1px solid #ccc; /* 1px solid light gray border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3)
+}
+
+button {
+    margin-top: 30px;
+    margin-left: 20px;
+    padding: 10px;
+    background-color: #c54b47;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    border-width: 0.5px;
+    color: white;
+    font-weight: bold;
+}
+
+form > * {
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+    color: rgb(82, 82, 82);
+    font-weight: bold;
+    font-size: 16px;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+form p > * {
+    display: flex;
+    flex-direction: row;
+}
+
+
+form h1 {
+    font-size: 20px;
+    color: rgb(37, 37, 37);
+    font-weight: bold;
+}
+
+form input[type="text"] {
+    width: 200px; /* Adjust this value to make the boxes smaller (e.g., 180px, 150px) */
+    padding: 8px 10px; /* Slightly reduce padding to make them appear more compact */
+    border: 1px solid #ccc; /* A subtle border for definition */
+    border-radius: 4px; /* Slightly rounded corners */
+    box-sizing: border-box; /* Ensures padding and border are included in the width/height */
+}
+
+form label {
+    /* flex-basis: 150px; /* Give labels a fixed width to align inputs */
+    /* text-align: right; /* Optional: Align label text to the right */
+
+    /* OR, if you want them to share space more dynamically: */
+    flex: 1; /* Allow labels to grow/shrink, taking up equal space */
+    min-width: 100px; /* Ensure labels have a minimum width */
+    max-width: 150px; /* Prevent labels from getting too wide */
+}
+
+.odin-icon {
+    width: 60px;
+    height: auto;
+}
+
+#login {
+    font-size: 16px;
+    margin-left: 20px;
+}
