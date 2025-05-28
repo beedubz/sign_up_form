@@ -21,27 +21,34 @@
         </div>
         <form action="/my-handling-form-page" method="post">
             <h1 class="bodytext">Let's do this thang!</h1>
-            <p>
-                <label for="first_name">First Name:</label>
-                <input type="text" id="first_name" name="user_first_name" />
-                <label for="last_name">Last Name:</label>
-                <input type="text" id="last_name" name="user_last_name" />
-            </p>
-            <p>
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="user_email" />
-                <label for="last_name">Phone:</label>
-                <input type="text" id="phone" name="user_phone" />
-            </p>
-            <p>
-                <label for="password">Password:</label>
-                <input type="text" id="password" name="user_password" />
-                <label for="password">Confirm Password:</label>
-                <input type="text" id="confirmed_password" name="user_confirmed_password" />
-            </p>
+            <div class="form-columns"> <div class="column"> <p>
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="user_first_name" />
+                    </p>
+                    <p>
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="user_email" />
+                    </p>
+                    <p>
+                        <label for="password">Password</label>
+                        <input type="text" minlength="3" id="password" name="user_password" />
+                    </p>
+                </div><div class="column"> <p>
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="user_last_name" />
+                    </p>
+                    <p>
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" name="user_phone" />
+                    </p>
+                    <p>
+                        <label for="confirmed_password">Confirm Password</label>
+                        <input type="text" minlength="3" id="confirmed_password" name="user_confirmed_password" />
+                    </p>
+                </div></div>
         </form>
-        <button>Create Account</button>
-        <p id="login">Already have an account? Log in.</p>
+        <button type="submit">Create Account</button>
+        <p id="login">Already have an account? <a href="http://www.facebook.com">Log in.</a></p>
     </div>
 </body>
 </html>
